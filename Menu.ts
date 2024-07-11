@@ -36,7 +36,7 @@ while (true) {
 
         switch (opcao) {
             case 1:
-                console.log("\n\nCadastrar produto\n\n");
+                console.log("\n\nCadastrar produto\n");
                 keyPress();
                 break;
             case 2:
