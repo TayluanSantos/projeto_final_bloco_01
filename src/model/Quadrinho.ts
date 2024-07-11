@@ -27,4 +27,10 @@ export class Quadrinho extends Produto {
 	public set anoPublicacao(value: number) {
 		this._anoPublicacao = value;
 	}
+
+	public visualizar(): void {
+		super.visualizar();
+		console.log(`Editora: ${this.editora}`);
+		console.log(`Ano de Publicação: ${this.anoPublicacao}`);
+	}
 }

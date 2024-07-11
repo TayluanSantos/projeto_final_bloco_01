@@ -60,11 +60,11 @@ export abstract class Produto {
 				break
 
 			case 2:
-				tipo = "Jogos";
+				tipo = "Jogo";
 				break;	
 
             case 3:
-                tipo = "Quadrinhos"
+                tipo = "Quadrinho"
                 break
 		}
 		

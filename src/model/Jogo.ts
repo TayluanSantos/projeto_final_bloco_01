@@ -17,6 +17,8 @@ export class Jogo extends Produto {
 		this._plataforma = value;
 	}
 
-    
-
+	public visualizar(): void {
+		super.visualizar();
+		console.log(`Plataforma: ${this.plataforma}`);
+	}
 }
