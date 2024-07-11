@@ -2,10 +2,22 @@ import { Produto } from "../model/Produto";
 import { ProdutoRepository } from "../repository/ProdutoRepository";
 
 export class ProdutoController implements ProdutoRepository {
-
+ 
     private _listaProdutos : Produto[] = new Array<Produto>();
     public numero : number = 0;
 
+    menorPreco(): void {
+       let listaCopia =  this._listaProdutos.slice();
+       listaCopia.sort((a,b) => a.preco - b.preco)
+
+       listaCopia.forEach(p => p.visualizar())
+    }
+    maiorPreco(): void {
+        let listaCopia =  this._listaProdutos.slice();
+        listaCopia.sort((a,b) => b.preco - a.preco)
+ 
+        listaCopia.forEach(p => p.visualizar())
+    }
 
     cadastrar(produto: Produto): void {
        this._listaProdutos.push(produto);
@@ -13,6 +25,7 @@ export class ProdutoController implements ProdutoRepository {
     }
 
     listarTodos(): void {
+        this._listaProdutos
         this._listaProdutos.forEach(produto => produto.visualizar());
     }
     

@@ -6,5 +6,7 @@ export interface ProdutoRepository {
     listarTodos() : void;
     buscarPorId(id:number) : void;
     atualizar(produto:Produto) : void;
-    deletar(id:number) : void;  
+    deletar(id:number) : void;
+    menorPreco() : void;
+    maiorPreco() : void;
 }

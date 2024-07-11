@@ -35,9 +35,11 @@ while (true) {
         console.log("            1 - Cadastrar Produto                    ");
         console.log("            2 - Listar todos os Produtos             ");
         console.log("            3 - Buscar produto pelo Id               ");
-        console.log("            4 - Atualizar Produto                    ");
-        console.log("            5 - Deletar Produto                      ");
-        console.log("            6 - Sair                                 ");
+        console.log("            4 - Buscar pelo maior preço              ");
+        console.log("            5 - Buscar pelo menor preço              ");
+        console.log("            6 - Atualizar Produto                    ");
+        console.log("            7 - Deletar Produto                      ");
+        console.log("            8 - Sair                                 ");
         console.log("                                                     ");
         console.log("*****************************************************");
         console.log("                                                     ",colors.reset);
@@ -117,9 +119,29 @@ while (true) {
                 keyPress()
                 break;
 
+             // BUSCAR PELO MAIOR PREÇO
+             case 4:
+                console.log(colors.fg.blue);
+                console.log("\nBuscar produto pelo maior preço\n");
+
+                produtoController.maiorPreco();
+
+                keyPress()
+                break;
+
+             // BUSCAR POR MENOR PREÇO
+             case 5:
+                console.log(colors.fg.blue);
+                console.log("\nBuscar produto pelo menor preço\n");
+
+                produtoController.menorPreco();
+
+                keyPress()
+                break;
+
 
             // ATUALIZAR
-            case 4:
+            case 6:
                 console.log(colors.fg.blue);
                 console.log("\nAtualizar Produto\n");
 
@@ -167,7 +189,7 @@ while (true) {
                 break;
 
             // DELETAR
-            case 5:
+            case 7:
                 console.log(colors.fg.blue);
                 console.log("\nDeletar  Produto\n");
 
